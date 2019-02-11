@@ -12,6 +12,7 @@ import translateInsetImage from './translate-small.png';
 import microbitImage from './microbit.png';
 import ev3Image from './ev3.png';
 import wedoImage from './wedo.png';
+import boostImage from './boost.png';
 import text2speechImage from './text2speech.png';
 import text2speechInsetImage from './text2speech-small.svg';
 import makeymakeyImage from './makeymakey.png';
@@ -24,6 +25,12 @@ import ev3MenuImage from './peripheral-connection/ev3/ev3-small.svg';
 import wedoPeripheralImage from './peripheral-connection/wedo/wedo-illustration.svg';
 import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
+
+import boostPeripheralImage from './peripheral-connection/boost/wedo-illustration.svg';
+import boostMenuImage from './peripheral-connection/boost/wedo-small.svg';
+import boostButtonImage from './peripheral-connection/boost/wedo-button-illustration.svg';
+
+
 
 export default [
     {
@@ -233,5 +240,36 @@ export default [
         ),
         helpLink: 'https://scratch.mit.edu/wedo'
 
-    }
+    },
+    {
+        name: 'LEGO Boost',
+        extensionId: 'boost',
+        collaborator: 'None',
+        iconURL: boostImage,
+        insetIconURL: boostMenuImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Build with motors and sensors."
+                description="Description for the 'LEGO Boost' extension"
+                id="gui.extension.boost.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: true,
+        peripheralImage: boostPeripheralImage,
+        smallPeripheralImage: boostMenuImage,
+        peripheralButtonImage: boostButtonImage,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their Boost."
+                id="gui.extension.boost.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/boost'
+
+    },
 ];
